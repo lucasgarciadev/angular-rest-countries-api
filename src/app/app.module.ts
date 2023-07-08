@@ -7,6 +7,7 @@ import { CardComponent } from './components/card/card.component';
 import { ListCardComponent } from './components/list-card/list-card.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { FilterRegionComponent } from './components/filter-region/filter-region.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
     CardComponent,
     ListCardComponent,
     HeaderComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    FilterRegionComponent
   ],
   imports: [
     BrowserModule,
