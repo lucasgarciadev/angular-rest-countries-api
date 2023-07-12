@@ -1,22 +1,22 @@
 <div class="card">
-  <img src="../../../assets/imgs/1200px-Flag_of_Germany.svg.jpg" alt="country flag">
+  <img [src]="data?.flags?.png" alt="${data?.name?.common} flag">
 
   <div class="card-name">
-    Germany
+    {{data?.name?.common}}
   </div>
 
   <div class="card-info">
     <div class="info-item">
       <strong>Population:</strong>
-      <p>81,770.900</p>
+      <p>{{ data?.population }}</p>
     </div>
     <div class="info-item">
       <strong>Region:</strong>
-      <p>Europe</p>
+      <p>{{ data?.region }}</p>
     </div>
     <div class="info-item">
       <strong>Capital:</strong>
-      <p>Berlin</p>
+      <p>{{ data?.capital }}</p>
     </div>
   </div>
 </div>

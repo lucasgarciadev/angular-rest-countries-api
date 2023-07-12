@@ -9,7 +9,14 @@
 
   gap: 4rem
 
+  @media screen and (max-width: 375px)
+      padding: .5em
+
   .search-filter-wrapper
     display: flex
     align-items: center
     justify-content: space-between
+
+    @media screen and (max-width: 375px)
+      flex-direction: column
+      gap: 1em

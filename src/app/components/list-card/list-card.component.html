@@ -1,1 +1,5 @@
-<p>list-card works!</p>
+<div class="list-card">
+  <ng-container *ngFor="let country of listCountries" >
+    <app-card [data]="country"></app-card>
+  </ng-container>
+</div>

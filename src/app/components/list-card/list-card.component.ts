@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Country } from 'src/types/Country';
 
 @Component({
   selector: 'app-list-card',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./list-card.component.sass']
 })
 export class ListCardComponent {
+
+  @Input() listCountries: Country[] = [];
 
 }
