@@ -20,4 +20,9 @@ export class RestCountriesApiService {
     return this.http.get<Country[]>(url);
   }
 
+  getCountriesByRegion(region: string): Observable<Country[]> {
+    const url = API_HOST + `/region/${region}`;
+    return this.http.get<Country[]>(url);
+  }
+
 }

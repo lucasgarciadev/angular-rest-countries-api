@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-filter-region',
@@ -6,5 +7,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./filter-region.component.sass']
 })
 export class FilterRegionComponent {
+
+  @Output() changeRegion = new EventEmitter<string>();
+
+  faChevronDown = faChevronDown;
+  region: string = '';
+  openOptions: boolean = false;
+
+  selectRegion(region: string) {
+    this.region = region;
+    this.changeRegion.emit(this.region);
+  }
+
+  toggleOptions() {
+    this.openOptions = !this.openOptions
+  }
 
 }

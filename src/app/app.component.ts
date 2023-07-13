@@ -28,4 +28,18 @@ export class AppComponent implements OnInit {
     })
   }
 
+  regionListener(region: string) {
+    if(region === '') {
+      this.ngOnInit();
+    } else {
+      this.api.getCountriesByRegion(region).subscribe({
+        next: response => {
+          this.listCountries = response;
+          console.log(response);
+        },
+        error: () => alert('Erro ao recuperar a lista. Tente novamente mais tarde')
+      })
+    }
+  }
+
 }

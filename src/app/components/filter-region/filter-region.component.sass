@@ -1,19 +1,40 @@
 @import '../../../styles'
 .filter-region
-  background-color: $white
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2)
-  padding: 1rem
   width: 15vw
-  padding: 1rem 1.5rem
-  color: $dark-gray
   font-size: $font-size-detail
-  border-radius: 4px
 
-  select, option
-    font-weight: 400
-    width: 100%
-    outline: none
-    border: none
+  &, .select-options
+    border-radius: 4px
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2)
+    background-color: $white
+
+
+  .selected-item
+    display: flex
+    justify-content: space-between
+    align-items: center
+    text-transform: capitalize
+
+    padding: 1rem 1.5rem
+
+    fa-icon
+      cursor: pointer
+
+  .select-options
+    display: none
+    width: inherit
+    padding: 1rem 1.5rem
+
+
+    .option
+      cursor: pointer
+
+    &.__is-open
+      display: block
+      position: absolute
+      top: 225px
+      z-index: 2
 
   @media screen and (max-width: 375px)
-    width: 100%
+      width: 100%
+

@@ -1,10 +1,25 @@
 <div class="filter-region">
-  <select name="select" id="select">
+
+  <div class="selected-item" (click)="toggleOptions()" >
+    {{region === '' ? 'Filter by region' : region}}
+    <fa-icon [icon]="faChevronDown" ></fa-icon>
+  </div>
+
+  <div class="select-options" [ngClass]="{'__is-open': openOptions}" >
+    <div (click)="selectRegion('')" class="option">All</div>
+    <div (click)="selectRegion('africa')" class="option">Africa</div>
+    <div (click)="selectRegion('america')" class="option">America</div>
+    <div (click)="selectRegion('asia')"  class="option">Asia</div>
+    <div (click)="selectRegion('europe')"  class="option">Europe</div>
+    <div (click)="selectRegion('oceania')" class="option">Oceania</div>
+  </div>
+
+  <!-- <select name="select" id="select">
     <option default value="">Filter by Region</option>
-    <option value="Africa">Africa</option>
-    <option value="America">America</option>
-    <option value="Asia">Asia</option>
-    <option value="Europe">Europe</option>
-    <option value="Oceania">Oceania</option>
-  </select>
+    <option value="africa">Africa</option>
+    <option value="america">America</option>
+    <option value="asia">Asia</option>
+    <option value="europe">Europe</option>
+    <option value="oceania">Oceania</option>
+  </select> -->
 </div>
