@@ -1,5 +1,10 @@
-<div class="list-card">
+<div class="list-card" *ngIf="this.listCountries && listCountries.length !== 0; else emptyList" >
   <ng-container *ngFor="let country of listCountries" >
     <app-card [data]="country"></app-card>
   </ng-container>
 </div>
+
+<ng-template #emptyList>
+  <h1>No countries found :/</h1>
+</ng-template>
+

@@ -25,4 +25,9 @@ export class RestCountriesApiService {
     return this.http.get<Country[]>(url);
   }
 
+  getCountriesByName(name: string) {
+    const url = API_HOST + `/name/${name}`;
+    return this.http.get<Country[]>(url);
+  }
+
 }

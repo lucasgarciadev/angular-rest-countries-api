@@ -9,6 +9,7 @@ import { ListCardComponent } from './components/list-card/list-card.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { FilterRegionComponent } from './components/filter-region/filter-region.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { FilterRegionComponent } from './components/filter-region/filter-region.
   imports: [
     BrowserModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

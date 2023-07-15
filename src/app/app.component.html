@@ -1,7 +1,7 @@
 <app-header></app-header>
 <div class="app-container">
   <div class="search-filter-wrapper">
-    <app-search-bar></app-search-bar>
+    <app-search-bar (emitirBusca)="searchByNameListener($event)" ></app-search-bar>
     <app-filter-region (changeRegion)="regionListener($event)" ></app-filter-region>
   </div>
   <app-list-card [listCountries]="listCountries" ></app-list-card>

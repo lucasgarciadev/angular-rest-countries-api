@@ -33,13 +33,21 @@ export class AppComponent implements OnInit {
       this.ngOnInit();
     } else {
       this.api.getCountriesByRegion(region).subscribe({
-        next: response => {
-          this.listCountries = response;
-          console.log(response);
-        },
+        next: response => this.listCountries = response,
         error: () => alert('Erro ao recuperar a lista. Tente novamente mais tarde')
       })
     }
+  }
+
+  searchByNameListener(country: string) {
+    console.log('Chegou no listener');
+    this.api.getCountriesByName(country).subscribe({
+      next: response => this.listCountries = response,
+      error: error => {
+        if(error.error.status === 404)
+          this.listCountries = [];
+      }
+    })
   }
 
 }

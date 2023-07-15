@@ -1,4 +1,4 @@
-<div class="search-bar">
+<form class="search-bar" [formGroup]="form">
   <fa-icon [icon]="faSearch" ></fa-icon>
-  <input type="text" placeholder="Search for a country..." name="search" id="search">
-</div>
+  <input type="text" placeholder="Search for a country..." name="search" id="search" formControlName="valorBusca" >
+</form>
