@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
-import { Observable } from 'rxjs';
+import { Observable, debounceTime, distinct, distinctUntilChanged, filter, switchMap } from 'rxjs';
 import { Country } from 'src/types/Country';
 
 
@@ -27,7 +27,11 @@ export class RestCountriesApiService {
 
   getCountriesByName(name: string) {
     const url = API_HOST + `/name/${name}`;
-    return this.http.get<Country[]>(url);
+    return this.http.get<Country[]>(url).pipe(
+      debounceTime(300),
+      filter(() => name.length >= 3),
+      distinctUntilChanged()
+    );
   }
 
 }
