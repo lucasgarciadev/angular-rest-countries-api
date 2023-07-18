@@ -2,7 +2,7 @@
 
   <div class="selected-item" (click)="toggleOptions()" >
     {{region === '' ? 'Filter by region' : region}}
-    <fa-icon [icon]="faChevronDown" ></fa-icon>
+    <fa-icon [ngClass]="{'__is-open': openOptions}"  [icon]="faChevronDown" ></fa-icon>
   </div>
 
   <div class="select-options" [ngClass]="{'__is-open': openOptions}" >

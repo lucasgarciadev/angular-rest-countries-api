@@ -16,7 +16,7 @@ export class FilterRegionComponent implements OnChanges {
   openOptions: boolean = false;
 
   ngOnChanges(changes: SimpleChanges): void {
-    if(changes['resetFilter'].currentValue === true) {
+    if(changes['resetFilter']?.currentValue === true) {
       this.selectRegion('');
     }
   }
