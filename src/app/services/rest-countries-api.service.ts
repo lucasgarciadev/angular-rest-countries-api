@@ -25,13 +25,18 @@ export class RestCountriesApiService {
     return this.http.get<Country[]>(url);
   }
 
-  getCountriesByName(name: string) {
+  getCountriesByName(name: string): Observable<Country[]> {
     const url = API_HOST + `/name/${name}`;
     return this.http.get<Country[]>(url).pipe(
       debounceTime(300),
       filter(() => name.length >= 3),
       distinctUntilChanged()
     );
+  }
+
+  getCountryByCioc(cioc: string | null): Observable<Country[]> {
+    const url = API_HOST + `/alpha/${cioc}`;
+    return this.http.get<Country[]>(url);
   }
 
 }

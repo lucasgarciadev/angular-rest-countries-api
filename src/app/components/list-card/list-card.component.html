@@ -1,6 +1,6 @@
 <div class="list-card" *ngIf="this.listCountries && listCountries.length !== 0; else emptyList" >
   <ng-container *ngFor="let country of listCountries" >
-    <app-card [data]="country"></app-card>
+    <app-card [data]="country" (click)="redirectToDetail(country)" ></app-card>
   </ng-container>
 </div>
 

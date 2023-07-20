@@ -1,0 +1,67 @@
+@import '../../../styles'
+
+.detail-container
+  a, a:visited
+    display: inline-block
+    padding: 4px 16px
+    border: 2px solid $dark-gray
+    box-shadow: 1px 1px 1px $very-light-gray
+    text-decoration: none
+    margin: 2rem 4rem
+
+    @media screen and (max-width: 375px)
+      margin: 2rem 1rem
+
+  .content
+    display: flex
+    padding: 4rem
+    gap: 4rem
+
+
+    .flag-wrapper, .info-wrapper
+      width: 50%
+
+    .flag-wrapper img
+      width: 100%
+
+    .info-wrapper
+      display: flex
+      flex-direction: column
+      gap: 2em
+      padding: 2rem 1em
+
+      .details
+        display: flex
+        justify-content: space-between
+
+        .item
+          display: flex
+          gap: 5px
+
+          margin-bottom: .5em
+
+      .border-countries
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+        gap: 5px
+
+        .border-country
+          cursor: pointer
+          padding: 4px 16px
+          border: 2px solid $dark-gray
+          box-shadow: 1px 1px 1px $very-light-gray
+
+    @media screen and (max-width: 375px)
+      flex-direction: column
+      padding: 1rem
+      gap: .5rem
+
+      .flag-wrapper, .info-wrapper
+        width: 100%
+
+      .details
+        flex-direction: column
+
+
+
