@@ -1,15 +1,19 @@
 @import '../../../styles'
 
 .detail-container
+  color: var(--color)
+  background: var(--background)
+
   a, a:visited
     display: inline-block
     padding: 4px 16px
-    border: 2px solid $dark-gray
-    box-shadow: 1px 1px 1px $very-light-gray
+    border: 2px solid var(--background-elements)
+    box-shadow: 1px 1px 1px var(--background)
     text-decoration: none
     margin: 2rem 4rem
+    color: inherit
 
-    @media screen and (max-width: 375px)
+    @media screen and (max-width: 1000px)
       margin: 2rem 1rem
 
   .content
@@ -49,10 +53,10 @@
         .border-country
           cursor: pointer
           padding: 4px 16px
-          border: 2px solid $dark-gray
-          box-shadow: 1px 1px 1px $very-light-gray
+          border: 2px solid var(--background-elements)
+          box-shadow: 1px 1px 1px var(--background)
 
-    @media screen and (max-width: 375px)
+    @media screen and (max-width: 1000px)
       flex-direction: column
       padding: 1rem
       gap: .5rem

@@ -3,20 +3,22 @@
 .app-container
   display: flex
   flex-direction: column
-
   padding: 4rem
-  background: $very-light-gray
-
   gap: 4rem
 
-  @media screen and (max-width: 375px)
-      padding: .5em
+  color: var(--color)
+  background: var(--background)
+
+  @media screen and (max-width: 800px)
+    padding: .5em
 
   .search-filter-wrapper
     display: flex
     align-items: center
     justify-content: space-between
+    padding: 0
 
-    @media screen and (max-width: 375px)
+    @media screen and (max-width: 800px)
       flex-direction: column
       gap: 2em
+      align-items: flex-start

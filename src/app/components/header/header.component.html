@@ -3,10 +3,10 @@
     Where in the world?
   </div>
 
-  <div class="theme-change-wrapper">
-    <fa-icon [icon]="faMoon" ></fa-icon>
+  <div class="theme-change-wrapper" (click)="toggleTheme()">
+    <fa-icon [icon]="darkMode ? faSun : faMoon" ></fa-icon>
     <div class="theme-change-text">
-      Dark Mode
+      {{darkMode ? 'Light Mode' : 'Dark Mode'}}
     </div>
   </div>
 </div>

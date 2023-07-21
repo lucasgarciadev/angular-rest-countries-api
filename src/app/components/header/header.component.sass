@@ -1,10 +1,12 @@
 @import '../../../styles'
 
 .header
+  color: var(--color)
+  background-color: var(--background-elements)
+
   display: flex
   justify-content: space-between
   align-items: center
-  background: $white
   width: 100vw
   padding: 2rem 4rem
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2)
@@ -29,5 +31,5 @@
 
   @media screen and (max-width: 375px)
     .text-wrapper, .theme-change-text
-       font-size: $font-size-home
+       font-size: var(--font-size-home)
 

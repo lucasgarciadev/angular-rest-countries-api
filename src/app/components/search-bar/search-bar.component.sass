@@ -4,12 +4,12 @@
   align-items: center
   gap: 20px
 
-  background-color: $white
+  background: var(--background-elements)
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2)
   width: 40vw
   padding: 1rem 1.5rem
-  color: $dark-gray
-  font-size: $font-size-detail
+  color: var(--color)
+  font-size: var(--font-size-detail)
   border-radius: 4px
 
   input
@@ -18,6 +18,7 @@
     width: 90%
     padding: .5rem
     color: inherit
+    background: inherit
 
-  @media screen and (max-width: 375px)
+  @media screen and (max-width: 800px)
     width: 90vw

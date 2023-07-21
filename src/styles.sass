@@ -1,20 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300%3B600%3B800&display=swap')
 
-$font-size-home: null
-$font-size-detail: null
 
-// elementos do tema dark
-$dark-blue: null
-// background do tema dark
-$very-dark-blue: null
-// fonte do tema light
-$very-dark-blue: null
-// fonte do search-bar do tema light
-$dark-gray: null
-// background do tema light
-$very-light-gray: null
-// texto do dark mode e elementos do tema light
-$white: null
+$font-size-home: 14px
+$font-size-detail: 16px
+
+$color-light: hsl(200, 15%, 8%)
+$color-dark: hsl(0, 0%, 100%)
+$background-light: hsl(0, 0%, 98%)
+$background-dark: hsl(207, 26%, 17%)
+$background-elements-light: hsl(0, 0%, 98%)
+$background-elements-dark: hsl(209, 23%, 22%)
 
 *
   margin: 0
@@ -23,15 +18,26 @@ $white: null
   box-sizing: border-box
   overflow: auto
 
-:root
-  font-family: 'Nunito Sans', sans-serif
+fa-icon
+  width: max-content
+  overflow: hidden
 
-  $font-size-home: 14px !global
-  $font-size-detail: 16px !global
-  $dark-blue: hsl(209, 23%, 22%) !global
-  $very-dark-blue: hsl(207, 26%, 17%) !global
-  $very-dark-blue: hsl(200, 15%, 8%) !global
-  $dark-gray: hsl(0, 0%, 52%) !global
-  $very-light-gray: hsl(0, 0%, 98%) !global
-  $white: hsl(0, 0%, 100%) !global
+html
+  font-family: "Nunito Sans", sans-serif
+
+  --font-size-home: #{$font-size-home}
+  --font-size-detail: #{$font-size-detail}
+
+  --color: #{$color-light}
+  --background: #{$background-light}
+  --background-elements: #{$background-elements-light}
+
+
+html[data-theme="dark"]
+    --color: #{$color-dark}
+    --background: #{$background-dark}
+    --background-elements: #{$background-elements-dark}
+
+
+
 
