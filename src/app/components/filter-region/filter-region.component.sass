@@ -1,11 +1,11 @@
 @import '../../../styles'
+
 .filter-region
   width: 200px
   font-size: var(--font-size-detail)
 
   &, .select-options
     border-radius: 4px
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2)
     background: var(--background-elements)
 
 
@@ -33,11 +33,19 @@
 
     .option
       cursor: pointer
+      margin-bottom: 5px
+
+      &:last-child
+        margin-bottom: 0
 
     &.__is-open
       display: block
       position: absolute
       top: 225px
       z-index: 2
+
+      @media screen and (max-width: 800px)
+        top: 250px
+
 
 

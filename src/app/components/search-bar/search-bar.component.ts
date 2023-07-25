@@ -8,10 +8,9 @@ import { debounceTime, filter, distinctUntilChanged, tap, pipe } from 'rxjs';
   templateUrl: './search-bar.component.html',
   styleUrls: ['./search-bar.component.sass']
 })
-export class SearchBarComponent implements OnInit, OnChanges {
+export class SearchBarComponent implements OnInit {
   faSearch = faSearch;
 
-  @Input() resetSearch: boolean = false;
   @Output() emitirBusca = new EventEmitter<string>();
 
 
@@ -20,12 +19,6 @@ export class SearchBarComponent implements OnInit, OnChanges {
   });
 
   constructor(private fb: FormBuilder) {}
-
-  ngOnChanges(changes: SimpleChanges): void {
-    if(changes['resetSearch']?.currentValue === true) {
-      this.form.get('valorBusca')?.setValue('');
-    }
-  }
 
   ngOnInit(): void {
     this.form?.get('valorBusca')?.valueChanges.subscribe(() => {

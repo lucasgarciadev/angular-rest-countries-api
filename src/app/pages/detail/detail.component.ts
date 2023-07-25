@@ -1,6 +1,6 @@
 import { Component, OnChanges, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Country } from 'src/types/Country';
+import { Country, Currency } from 'src/types/Country';
 import { RestCountriesApiService } from '../../services/rest-countries-api.service';
 
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
@@ -21,7 +21,6 @@ export class DetailComponent implements OnInit{
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(_ => {
-      // this.ngOnInit();
       this.getCountryByCioc(this.activatedRoute.snapshot.params['name']);
     })
   }
@@ -30,12 +29,29 @@ export class DetailComponent implements OnInit{
     this.api.getCountryByCioc(cioc).subscribe(
       response => {
         this.data = response[0];
+        console.log(this.data);
       }
     )
   }
 
   redirectDetail(country: string) {
     this.router.navigate([`detail/${country}`]);
+  }
+
+  manageCurrencies() {
+    let currencies: string[] = [];
+    (Object.values<Currency>(this.data?.currencies)).forEach((currency: Currency) => {
+      currencies.push(currency.name)
+    })
+    return currencies.join(', ')
+  }
+
+  manageLanguages() {
+    let languages: string[] = [];
+    (Object.values<any>(this.data?.languages)).forEach(language => {
+      languages.push(language)
+    })
+    return languages.join(', ')
   }
 
 }

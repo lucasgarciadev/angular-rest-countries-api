@@ -6,7 +6,7 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
   templateUrl: './filter-region.component.html',
   styleUrls: ['./filter-region.component.sass']
 })
-export class FilterRegionComponent implements OnChanges {
+export class FilterRegionComponent {
 
   @Input() resetFilter: boolean = false;
   @Output() changeRegion = new EventEmitter<string>();
@@ -14,12 +14,6 @@ export class FilterRegionComponent implements OnChanges {
   faChevronDown = faChevronDown;
   region: string = '';
   openOptions: boolean = false;
-
-  ngOnChanges(changes: SimpleChanges): void {
-    if(changes['resetFilter']?.currentValue === true) {
-      this.selectRegion('');
-    }
-  }
 
   selectRegion(region: string) {
     this.region = region;

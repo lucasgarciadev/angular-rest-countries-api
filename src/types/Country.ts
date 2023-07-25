@@ -11,7 +11,7 @@ export interface Country {
   cioc: string,
   // coatOfArms
   continents: string[]
-  currencies: Currency[]
+  currencies: any
   // demonyms
   fifa: string
   flag: string
@@ -20,7 +20,7 @@ export interface Country {
   // idd
   independent: boolean
   landlocked: false
-  languages: {code: string}[]
+  languages: any
   // latlng
   // maps
   name: Name
@@ -51,7 +51,7 @@ interface Flag {
   svg: string
 }
 
-interface Currency {
+export interface Currency {
   name: string,
   symbol: string
 }

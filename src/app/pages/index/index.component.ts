@@ -28,9 +28,7 @@ export class IndexComponent implements OnInit {
       this.ngOnInit();
     } else {
       this.api.getCountriesByRegion(region).subscribe({
-        next: response => {
-          this.listCountries = response
-        },
+        next: response => this.listCountries = response,
         error: () => alert('Erro ao recuperar a lista. Tente novamente mais tarde')
       })
     }
@@ -42,9 +40,7 @@ export class IndexComponent implements OnInit {
     } else {
       this.api.getCountriesByName(country).subscribe(
       {
-        next: response => {
-          this.listCountries = response
-        },
+        next: response => this.listCountries = response,
         error: error => {
           if(error.error.status === 404)
           this.listCountries = [];
