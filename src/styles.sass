@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300%3B600%3B800&display=swap')
 
-
 $font-size-home: 14px
 $font-size-detail: 16px
 
@@ -10,38 +9,66 @@ $background-light: hsl(0, 0%, 98%)
 $background-dark: hsl(207, 26%, 17%)
 $background-elements-light: hsl(0, 0%, 100%)
 $background-elements-dark: hsl(209, 23%, 22%)
-$shadow: hsl(0, 0%, 52%, .5)
 
-*
-  margin: 0
-  border: 0
-  padding: 0
+*, *:before, *:after
+  font-family: "Nunito Sans", sans-serif
   box-sizing: border-box
-  overflow: auto
-  outline: none
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+  text-rendering: optimizeLegibility
+  -webkit-font-smoothing: antialiased
+  text-size-adjust: none
+
+footer, header, nav, section, main
+  display: block
+
+body
+  line-height: 1
+
+ol, ul
   list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+  content: ''
+  content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+input
+  -webkit-appearance: none
+  border-radius: 0
 
 
 html
-  font-family: "Nunito Sans", sans-serif
-
   --font-size-home: #{$font-size-home}
   --font-size-detail: #{$font-size-detail}
 
   --color: #{$color-light}
   --background: #{$background-light}
   --background-elements: #{$background-elements-light}
-  --shadow: #{$shadow}
 
-  .card, .search-bar, .header, a, a:visited, .border-country, .select-options
-    box-shadow: 0 0 5px var(--shadow)
+  body
+    background: var(--background)
+    overflow-x: hidden
+
+  .card, .search-bar, .header, a, a:visited, .border-country, .select-options, .filter-region
+    box-shadow: 0 0 5px rgba(0, 0, 0, .3)
 
   fa-icon
     width: max-content
     overflow: hidden
 
-  body
-    background: var(--background)
 
 
 html[data-theme="dark"]

@@ -8,7 +8,6 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 })
 export class FilterRegionComponent {
 
-  @Input() resetFilter: boolean = false;
   @Output() changeRegion = new EventEmitter<string>();
 
   faChevronDown = faChevronDown;

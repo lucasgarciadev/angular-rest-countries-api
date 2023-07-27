@@ -1,11 +1,10 @@
 @import '../../../styles'
 
 .card
-  gap: 1em
+  gap: 1.5em
   background: var(--background-elements)
   border-radius: 4px
   font-size: var(--font-size-home)
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, .2)
 
   width: 300px
   height: auto
@@ -17,22 +16,27 @@
     height: 175px
 
   .card-name
-    font-size: var(--font-size-detail)
+    font-size: 18px
     font-weight: 700
 
-  &, card-info
+  .card-info, .card-name
+    padding: 0 1rem
+
+  &, .card-info
     display: flex
     flex-direction: column
 
     .info-item
       display: flex
       gap: 5px
+      margin-bottom: 10px
+
+      strong
+        font-weight: 700
 
       &:last-child
-        margin-bottom: 3em
+        margin-bottom: 3rem
 
-  .card-info, .card-name
-    padding: 0 1.5em
 
 
 
