@@ -27,10 +27,7 @@ export class DetailComponent implements OnInit{
 
   getCountryByCioc(cioc: string | null = null) {
     this.api.getCountryByCioc(cioc).subscribe(
-      response => {
-        this.data = response[0];
-        console.log(this.data);
-      }
+      response => this.data = response[0]
     )
   }
 
