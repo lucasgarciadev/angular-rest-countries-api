@@ -1,6 +1,31 @@
 # AngularRestCountriesApi
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.1.
+Esse projeto foi criado para fins acadêmicos e desenvolvido com base na interface do desafio da plataforma [Frontend Mentor](https://www.frontendmentor.io).
+
+Funcionalidades da aplicação
+
+### Funcionalidades da aplicação
+  * Visualização de todos os países na home
+  * Visualizar detalhes de cada país
+  * Buscar países pelo nome
+  * Filtrar países pelo continente a que pertencem
+  * Mudar o tema da aplicação
+
+### Para o desenvovimento da aplicação foram utilizados
+
+  * Angular 16
+  * SASS
+  * RXJS
+  * Font Awesome
+  * Consumo de API REST
+
+### Imagens do projeto
+
+![home light mode.](src/assets/imgs/rest-countries-1.png "Imagem simples")
+![home dark mode.](src/assets/imgs/rest-countries-3.png "Imagem simples")
+![details desktop.](src/assets/imgs/rest-countries-4.png "Imagem simples")
+![home mobile.](src/assets/imgs/rest-countries-2.png "Imagem simples")
+
 
 ## Development server
 
