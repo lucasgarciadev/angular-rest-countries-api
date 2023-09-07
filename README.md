@@ -2,8 +2,6 @@
 
 Esse projeto foi criado para fins acadêmicos e desenvolvido com base na interface do desafio da plataforma [Frontend Mentor](https://www.frontendmentor.io).
 
-Funcionalidades da aplicação
-
 ### Funcionalidades da aplicação
   * Visualização de todos os países na home
   * Visualizar detalhes de cada país
@@ -18,6 +16,9 @@ Funcionalidades da aplicação
   * RXJS
   * Font Awesome
   * Consumo de API REST
+
+### Deploy da aplicação
+O funcionamento do projeto pode ser acessado [clicando aqui](https://angular-rest-countries-api.vercel.app/)
 
 ### Imagens do projeto
 
